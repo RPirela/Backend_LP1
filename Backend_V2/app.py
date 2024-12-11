@@ -2,7 +2,7 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 
-app = Flask(name)
+app = Flask(__name__)
 CORS(app)
 
 @app.route('/submit', methods=['POST'])
@@ -20,5 +20,5 @@ def fetch():
     return jsonify({'data': data})
 
 
-if name == 'main':
+if __name__ == 'main':
     app.run(port=8000)
