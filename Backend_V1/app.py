@@ -13,5 +13,5 @@ def submit():
     return {'message': 'Data received'}
 
 
-if __name__ == 'main':
+if __name__ == '__main__':
     app.run(port=7000)
